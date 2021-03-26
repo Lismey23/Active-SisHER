@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS activeuser_db;
 CREATE DATABASE activeuser_db;
 
-CREATE TABLE activeprofile_db(
+CREATE TABLE activeprofile (
 id INTEGER AUTO_INCREMENT NOT NULL,
 name VARCHAR (50),
 category INTEGER,
