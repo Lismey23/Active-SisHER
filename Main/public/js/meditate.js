@@ -1,4 +1,4 @@
-// Credit: Mateusz Rybczonec
+
 
 var meditate = document.getElementById("meditate");
 
