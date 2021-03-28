@@ -1,10 +1,15 @@
 
 
 var meditate = document.getElementById("meditate");
+var audio = document.querySelector('audio');
 
 meditate.addEventListener("click", function(){
-    console.log(meditate)
-    const FULL_DASH_ARRAY = 283;
+    console.log(meditate);
+
+    audio.volume=0.2;
+    audio.play();
+
+const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 10;
 const ALERT_THRESHOLD = 5;
 
