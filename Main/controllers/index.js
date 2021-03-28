@@ -1,27 +1,28 @@
 const router = require('express').Router();
+// const userRoutes = require('./userRoutes');
 
-const apiRoutes = require('./api');
+// const apiRoutes = require('./api');
 
-router.use('/api', apiRoutes);
+// router.use('/api', apiRoutes);
 
-router.get('/', (req, res)=>{
+router.get('/', async (req, res)=>{
 res.render("homepage")
 })
 
-router.get('/groups', (req, res)=>{
-res.render("groups")
+router.get('/groups', async (req, res)=>{
+res.render("groupspage")
 })
 
-router.get('/meditate', (req, res)=>{
-res.render("meditate")
+router.get('/meditate', async (req, res)=>{
+res.render("meditatepage")
 })
 
-router.get('/login', (req, res)=>{
-res.render("login")
+router.get('/login', async (req, res)=>{
+res.render("loginpage")
 })
 
-router.get('/signup', (req, res)=>{
-res.render("signup")
+router.get('/signup', async (req, res)=>{
+res.render("signuppage")
 })
 
 module.exports = router;
