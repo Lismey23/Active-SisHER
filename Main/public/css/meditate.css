@@ -58,4 +58,47 @@
     font-size: 48px;
   }
 
+ #time-length {
+   width: 220px;
+   height: 40px;
+   background-color: rgb(98, 120, 131);
+  color:white;
+  text-align-last: center;
+  font-weight: bold;
+ 
+ }
+
+ .btn {
+  background-color: rgb(98, 120, 131);
+  color: white;
+  margin: 10px;
+  padding: 10px;
+  width: 115px;
+  font-weight: bold;
+
+ }
+
+ #meditate {
+
+  background-color: rgb(98, 120, 131);
+  color: white;
+  width: 50%;
+  height: 40px;
+  font-weight: bold;
+
+ }
   
+ h1 {
+  font-family: 'Kiwi Maru', serif;
+  font-size: 30px;
+ }
+ p {
+  font-family: 'Kiwi Maru', serif;
+  font-size: 30px;
+ }
+
+ h2 {
+  font-family: 'Satisfy', cursive;
+  font-size: 36px;
+  text-align: center;
+ }
