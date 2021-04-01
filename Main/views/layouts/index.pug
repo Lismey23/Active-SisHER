@@ -1,0 +1,15 @@
+.wrapper
+
+        form.form-signin(method='post', action='/signin')
+
+          h3.form-signin-heading Nodejs MySQL Login Script
+          |
+          - if(message){
+          p(style='color:red') #{message}
+          - }
+          input.form-control(type='text', name='username', placeholder='Username')
+          |
+          input.form-control(type='password', name='password', placeholder='Password')
+          label.checkbox
+          |
+          button.btn.btn-lg.btn-primary.btn-block(type='submit') Login
