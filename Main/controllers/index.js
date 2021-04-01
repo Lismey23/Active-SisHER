@@ -6,16 +6,19 @@ router.use('/api', userRoutes);
 
 router.use('/', homeRoutes);
 
+router.get('/', async (req, res) => {
+    res.render("./homepage.handlebars")
+})
 router.get('/groups', async (req, res) => {
-     res.render("groupspage")
+     res.render("./groupspage.handlebars")
  })
  router.get('/meditate', async (req, res) => {
-     res.render("meditatepage")
+     res.render("./meditatepage.handlebars")
  })
  router.get('/login', async (req, res) => {
-     res.render("loginpage")
+     res.render("./loginpage.handlebars")
  })
  router.get('/signup', async (req, res) => {
-    res.render("signuppage")
+    res.render("./signuppage.handlebars")
  })
 module.exports = router;
