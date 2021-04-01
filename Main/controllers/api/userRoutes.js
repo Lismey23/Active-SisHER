@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
+//const mysql = require('mysql')
+
 
 router.post('/', async (req, res) => {
   try {
