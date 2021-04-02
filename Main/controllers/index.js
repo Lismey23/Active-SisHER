@@ -1,9 +1,12 @@
 const router = require('express').Router();
 const userRoutes = require('./api/userRoutes');
 const homeRoutes = require('./homeRoutes');
+const groupRoutes  = require('./api/groupRoutes');
 
 router.use('/api/users', userRoutes);
 router.use('/', homeRoutes);
+router.use('/groups', groupRoutes);
+
 
 // return homepage must remain 
 router.get('/', async (req, res) => {
@@ -24,16 +27,21 @@ router.get('/', async (req, res) => {
       res.status(500).json(err);
     }
   });
+
 router.get('/groups', async (req, res) => {
     res.render("groupspage")
 })
+
 router.get('/meditate', async (req, res) => {
     res.render("meditatepage")
 })
+
 router.get('/login', async (req, res) => {
     res.render("loginpage")
 })
+
 router.get('/signup', async (req, res) => {
    res.render("signuppage")
 })
+
 module.exports = router;
