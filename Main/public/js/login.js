@@ -2,11 +2,11 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
-  const firstName = document.querySelector('#firstName-signup').value.trim();
-  const lastName = document.querySelector('#lastName-signup').value.trim();
-  const activity = document.querySelector('#activity-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
+  const firstName = document.querySelector('#inputfirstName4').value.trim();
+  const lastName = document.querySelector('#inputlastName4').value.trim();
+  const activity = document.querySelector('#inputActivity').value.trim();
+  const email = document.querySelector('#inputEmail4').value.trim();
+  const password = document.querySelector('#inputPassword4').value.trim();
 
   if (email && password) {
     // Send a POST request to the API endpoint
@@ -29,12 +29,12 @@ const signupFormHandler = async (event) => {
   event.preventDefault();
 
   
-  const firstName = document.querySelector('#firstName-signup').value.trim();
-  const lastName = document.querySelector('#lastName-signup').value.trim();
-  const activity = document.querySelector('#activity-signup').value.trim();
-  const email = document.querySelector('#email-signup').value.trim();
-  const password = document.querySelector('#password-signup').value.trim();
-
+  const firstName = document.querySelector('#inputfirstName4').value.trim();
+  const lastName = document.querySelector('#inputlastName4').value.trim();
+  const activity = document.querySelector('#inputActivity').value.trim();
+  const email = document.querySelector('#inputEmail4').value.trim();
+  const password = document.querySelector('#inputPassword4').value.trim();
+ console.log(firstName, activity);
   if (firstName && lastName && activity && email && password) {
     const response = await fetch('/api/users', {
       method: 'POST',
@@ -51,9 +51,10 @@ const signupFormHandler = async (event) => {
 };
 
 document
-  .querySelector('logininpage')
-  .addEventListener('submit', loginFormHandler);
+  .querySelector('.signup')
+  .addEventListener('submit', signupFormHandler);
 
 document
-  .querySelector('signuppage')
-  .addEventListener('submit', signupFormHandler);
+.querySelector('.login')
+.addEventListener('submit', loginFormHandler);
+
