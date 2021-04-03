@@ -34,19 +34,19 @@
       border: 10px solid #F8DBC9;
       margin: 20px;
   }
-  .basketball{
+  #basketball{
     display: block;
     padding: 15px;
     border: 10px solid #F8DBC9;
     margin: 20px;
   }
-  .biking{
+  #biking{
       display: block;
       padding: 15px;
       border: 10px solid #F8DBC9;
       margin: 20px;
     }
-  .skating{
+  #skating{
       display: block;
       padding: 15px;
       border: 10px solid #F8DBC9;
