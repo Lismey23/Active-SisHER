@@ -7,14 +7,11 @@ router.use('/api/users', userRoutes);
 router.use('/', homeRoutes);
 
 // return homepage must remain 
-router.get('/', async (req, res) => {
-     res.render("homepage")
-   })
+
  router.get('/', async (req, res) => {
     try {
       res.render('homepage', { 
-        projects, 
-        logged_in: req.session.logged_in 
+       logged_in: req.session.logged_in  
       });
     } catch (err) {
       res.status(500).json(err);
@@ -37,15 +34,21 @@ router.get('/groups', async (req, res) => {
 })
 
 router.get('/meditate', async (req, res) => {
-    res.render("meditatepage")
+    res.render("meditatepage", {
+      logged_in: req.session.logged_in  
+    })
 })
 
 router.get('/login', async (req, res) => {
-    res.render("loginpage")
+    res.render("loginpage", {
+      logged_in: req.session.logged_in  
+    })
 })
 
 router.get('/signup', async (req, res) => {
-   res.render("signuppage")
+   res.render("signuppage", {
+    logged_in: req.session.logged_in  
+   })
 })
 
 module.exports = router;

@@ -1,21 +1,23 @@
+console.log("hello")
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
   // Collect values from the login form
   const email = document.querySelector('#inputEmail4').value.trim();
   const password = document.querySelector('#inputPassword4').value.trim();
-
+  console.log(email)
   if (email && password) {
     // Send a POST request to the API endpoint
-    const response = await fetch('/api/users', {
+    const response = await fetch('/api/users/login', {
       method: 'POST',
-      body: JSON.stringify({ firstName, lastName, activity, email, password }),
+      body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      // If successful, redirect the browser to the profile page
-      document.location.replace('/');
+      // If successful, redirect the browser to the groups page
+      document.location.replace('/groups');
     } else {
       alert(response.statusText);
     }
@@ -46,12 +48,16 @@ const signupFormHandler = async (event) => {
     }
   }
 };
-
-document
+if (document.querySelector('.signup')){
+  document
   .querySelector('.signup')
   .addEventListener('submit', signupFormHandler);
+}
 
-document
-.querySelector('.login')
-.addEventListener('submit', loginFormHandler);
+if (document.querySelector('.login')){
+  document
+  .querySelector('.login')
+  .addEventListener('click', loginFormHandler);
+  
+}
 
