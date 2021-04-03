@@ -1,12 +1,10 @@
 const router = require('express').Router();
 const userRoutes = require('./api/userRoutes');
 const homeRoutes = require('./homeRoutes');
-const groupRoutes  = require('./api/groupRoutes');
+const { User } = require('../models');
 
 router.use('/api/users', userRoutes);
 router.use('/', homeRoutes);
-router.use('/groups', groupRoutes);
-
 
 // return homepage must remain 
 router.get('/', async (req, res) => {
@@ -14,11 +12,6 @@ router.get('/', async (req, res) => {
    })
  router.get('/', async (req, res) => {
     try {
-      // Get all projects and JOIN with user data
-      
-      // Serialize data so the template can read it
-    
-      // Pass serialized data and session flag into template
       res.render('homepage', { 
         projects, 
         logged_in: req.session.logged_in 
@@ -29,7 +22,18 @@ router.get('/', async (req, res) => {
   });
 
 router.get('/groups', async (req, res) => {
-    res.render("groupspage")
+  const userData = await User.findByPk(req.session.user_id)
+  const user = userData.get({plain:true});
+  const allUserData = await User.findAll({
+    where: {
+      activity: user.activity
+    }
+  })
+  const allUsers = allUserData.map(user=> user.get({plain:true}))
+    res.render("groupspage",{
+      user,
+      allUsers
+    })
 })
 
 router.get('/meditate', async (req, res) => {
