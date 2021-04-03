@@ -118,3 +118,4 @@ patience.addEventListener('click', function () { var currentQuote = Math.floor(M
 balance.addEventListener('click', function () { var currentQuote = Math.floor(Math.random() * (balanceArr.length)); console.log(currentQuote); displayQuote.innerHTML = balanceArr[currentQuote]; })
 anxiety.addEventListener('click', function () { var currentQuote = Math.floor(Math.random() * (anxietyArr.length)); console.log(currentQuote); displayQuote.innerHTML = anxietyArr[currentQuote]; })
 stress.addEventListener('click', function () { var currentQuote = Math.floor(Math.random() * (stressArr.length)); console.log(currentQuote); displayQuote.innerHTML = stressArr[currentQuote]; })
+
