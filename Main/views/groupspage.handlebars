@@ -7,9 +7,12 @@
 
 {{!-- <div data-id={{user.id}} data-activity={{user.activity}}> --}}
 
-</div>
+{{!-- <div class="container1">
+  <div class="row">
+    <div class="col-sm">
+
 <div class="card hide" id="skating" style="width: 18rem;">
-  <img src="https://thejuliahotel.com/wp-content/uploads/2019/08/cycling-miami.jpg" class="card-img-top" alt="...">
+  <img src="../Assets/fashionable-young-woman-wearing-roller-skate-skating-sidewalk-city.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"></h5>
     <p class="card-text">Skating</p>
@@ -19,7 +22,13 @@
   </ul>
 </div>
 </div>
+</div>
+</div>
+</div> --}}
 
+<div class="container1">
+  <div class="row">
+    <div class="col-sm">
 <div class="card hide" id="biking" style="width: 18rem;">
   <img src="https://thejuliahotel.com/wp-content/uploads/2019/08/cycling-miami.jpg" class="card-img-top" alt="...">
   <div class="card-body">
@@ -31,9 +40,15 @@
   </ul>
 </div>
 </div>
+</div>
+</div>
+</div>
 
+{{!-- <div class="container1">
+  <div class="row">
+    <div class="col-xl">
 <div class="card" id="basketball" style="width: 18rem;">
-  <img href="." class="card-img-top" alt="...">
+  <img src="../Assets/female-teen-student-playing-basketball-sportsground.jpg" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title"></h5>
     <p class="card-text">Basketball</p>
@@ -41,4 +56,18 @@
   <ul class="list-group list-group-flush">
     <li class="list-group-item">Saturday Morning Basketball Group</li>
 </div>
+
+     </div>
+  </div>
+</div> --}}
+
+<div class="container1" id="members">
+<p class="members">Members:</p>
+
+{{#each allUsers as |users|}}
+<div class="col">Name: {{users.firstName}}</div>
+<div class="col">E-mail: {{users.email}}</div>
+{{/each}}
+</div>
 </body>
+<script src="/js/groups.js"></script>
