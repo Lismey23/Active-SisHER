@@ -29,7 +29,8 @@ router.get('/groups', async (req, res) => {
   const allUsers = allUserData.map(user=> user.get({plain:true}))
     res.render("groupspage",{
       user,
-      allUsers
+      allUsers,
+      logged_in: req.session.logged_in 
     })
 })
 
