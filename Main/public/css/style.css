@@ -34,4 +34,12 @@
       border: 10px solid #F8DBC9;
       margin: 20px;
   }
- 
+  .btn{
+    background-color: rgb(98, 120, 131);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    width: 115px;
+    font-weight: bold;
+    align-items: center;
+  }
