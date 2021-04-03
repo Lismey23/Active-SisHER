@@ -1,14 +1,15 @@
-DROP DATABASE IF EXISTS groupSelectionDB;
-CREATE DATABASE groupSelectionDB;
+DROP DATABASE IF EXISTS active_userDB;
+CREATE database active_userDB;
+use  active_userDB;
 
-USE groupSelectionDB;
-
-CREATE TABLE groups(
-    id INT NOT NULL AUTO_INCREMENT,
-    category INT NOT NULL,
-    activity VARCHAR(25),
-    PRIMARY KEY(id),
-    FOREIGN KEY (category) REFERENCES ActiveUser(category) 
+CREATE TABLE users(
+id INT AUTO_INCREMENT NOT NULL,
+firstName VARCHAR(50), 
+lastName VARCHAR(75),
+activity VARCHAR(25),
+email VARCHAR(50),
+password VARCHAR(100),
+Primary Key(id)
 );
 
 
