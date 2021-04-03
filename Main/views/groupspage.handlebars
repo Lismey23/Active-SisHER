@@ -1,1 +1,7 @@
-<p>groups</p>
+{{user.activity}}
+<div data-id={{user.id}} data-activity={{user.activity}}>
+
+</div>
+{{#each allUsers as |users|}}
+{{users.firstName}}{{users.email}}
+{{/each}}
