@@ -1,7 +1,16 @@
-{{user.activity}}
-<div data-id={{user.id}} data-activity={{user.activity}}>
 
+<header>Activity</header>
+<body>
+<div class="card" style="width: 18rem;">
+  <img src="https://thejuliahotel.com/wp-content/uploads/2019/08/cycling-miami.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"></h5>
+    <p class="card-text">Biking Sunday's</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
 </div>
-{{#each allUsers as |users|}}
-{{users.firstName}}{{users.email}}
-{{/each}}
+</body>
